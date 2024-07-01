@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div">helloo rahul</div>
+</body>
+<script src="./jquery/dist/jquery.js"></script>
+<script>
+    // const show = async () => {
+    //     try {
+
+    //        await  $.post("api/v1/register", `name=jimmy&email=jimmyjaryal4@gmail.com&password=hellEoo`,(data) => {
+    //             console.log(data)
+    //         })
+    //     } catch (error) {
+    //         // $.parseJSON(err)
+    //             console.log(error)
+    //     }
+    // }
+    // show();
+
+    // $.ajax({
+    //     url: "api/v1/register",
+    //     data: JSON.stringify({name:"sherry"}),
+    //     contentType: "application/json",
+    //     type:"POST",
+    //     dataType:"json",
+    //     success: (data)=>{
+    //         console.log(data);
+    //         localStorage.setItem("token", data.token)
+
+    //     },
+    //     error: (err)=>{
+    //         console.log(err)
+    //         // $("div").text(error.responseJSON.msg);
+    //         // $("div").text(error.responseJSON.err.name);
+    //     }
+    // })
+
+    // $.ajax({
+    //     url: "api/v1/login",
+    //     data: JSON.stringify({
+    //         email: "rahuljaryal1@gmail.com", password: "hellobaby"
+    //     }
+    //     ),
+    //     contentType: "application/json",
+    //     type: "POST",
+    //     dataType: "json",
+    //     success: (data) => {
+    //      localStorage.setItem("token" , data.token)
+
+    //         console.log(data);
+
+    //     },
+    //     error: (error) => {
+    //         console.log(error)
+    //         // $("div").text(error.responseJSON.msg);
+    //         // $("div").text(error.responseJSON.err.name);
+    //     }
+    // })
+
+    // $.ajax({
+    //     url: "api/v1/jobs",
+    //     data: JSON.stringify({
+    //         email: "rahuljaryalg14g@gmail.com", password: "hellobaby"
+    //     }),
+    //     headers: { Authorization: "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4Y2YyZmFhMDFmMTE1MTQ5NWI0YjkiLCJuYW1lIjoiUmFodWwiLCJpYXQiOjE3MTkxOTMzOTIsImV4cCI6MTcyMTc4NTM5Mn0.LkdTR_0gzC-TaIGWPTanvv2-L6GLnVP607xU1RhgCpI" },
+    //     contentType: "application/json",
+    //     type: "POST",
+    //     dataType: "json",
+    //     success: (data) => {
+    //         console.log(data);
+
+    //     },
+    //     error: (error) => {
+    //         console.log(error)
+    //         // $("div").text(error.responseJSON.msg);
+    //         // $("div").text(error.responseJSON.err.name);
+    //     }
+    // })
+
+    // $.ajax({
+    //     url: "api/v1/jobs",
+    //     // data: JSON.stringify({
+    //     //     company: "concordia", position: "web-developer", status:"senior"
+    //     // }),
+    //     headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+    //     contentType: "application/json",
+    //     type: "GET",
+    //     dataType: "json",
+    //     success: (data) => {
+    //         console.log(data);
+
+    //     },
+    //     error: (error) => {
+    //         console.log(error)
+    //         // $("div").text(error.responseJSON.msg);
+    //         // $("div").text(error.responseJSON.err.name);
+    //     }
+    // })
+
+    
+    // $.ajax({
+    //     url: "api/v1/jobs/667e1c5f926325b",
+    //     data: JSON.stringify({
+    //         company: "STAR", position: "JACK SPARROW", status:"senior"
+    //     }),
+    //     headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+    //     contentType: "application/json",
+    //     type: "PATCH",
+    //     dataType: "json",
+    //     success: (data) => {
+    //         console.log(data);
+    //         // $("div").text(data.job[0].createdBy)
+
+    //     },
+    //     error: (error) => {
+    //         console.log(error)
+    //         // $("div").text(error.responseJSON.msg);
+    //         // $("div").text(error.responseJSON.err.name);
+    //     }
+    // })
+
+    
+    $.ajax({
+        url: "api/v1/jobs/667e1c31921901122cde58",
+        // data: JSON.stringify({
+        //     company: "STAR SECURITY", position: "JACK SPARROW", status:"senior"
+        // }),
+        headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+        contentType: "application/json",
+        type: "DELETE",
+        dataType: "json",
+        success: (data) => {
+            console.log(data);
+            // $("div").text(data.job[0].createdBy)
+
+        },
+        error: (error) => {
+            console.log(error)
+            // $("div").text(error.responseJSON.msg);
+            // $("div").text(error.responseJSON.err.name);
+        }
+    })
+
+</script>
+
+</html>
